@@ -12,13 +12,13 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
 		/>
-		<link rel="stylesheet" href="./assets/css/style.css" />
+		<link rel="stylesheet" href="./Assets/style.css" />
 		<title>Weather Dashboard</title>
 	</head>
     <body class="flex-column min-100-vh">
 		<header class="hero">
 			<h1 class="app-title">
-				<i class="fab fa-github"></i> Weather Dashboard
+				<i class="fas fa-cloud-sun-rain"></i> Weather Dashboard
 			</h1>
 		</header>
 		<main class="flex-row justify-space-between">
@@ -26,15 +26,14 @@
 				<div class="card">
 					<h3 class="card-header text-uppercase">City Search</h3>
 					<form id="city-form" class="card-body">
-						<label class="form-label" for="cityname">City Name</label>
 						<input
-							name="cityname"
-							id="cityname"
+							name="city-name"
+							id="city-name"
 							type="text"
 							autofocus="true"
 							class="form-input"
 					    />
-						<button type="submit" class="btn">Find City</button>
+						<button type="submit" class="btn">Search</button>
 					</form>
 				</div>
 			</div>
