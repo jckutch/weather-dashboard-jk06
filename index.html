@@ -19,10 +19,9 @@
     <body class="flex-column min-100-vh">
 		<header class="hero">
 			<h1 class="app-title">
-				<i class="fas fa-cloud-sun-rain"></i> Weather Dashboard
+				<i class="fas fa-cloud-sun-rain"></i> Weather Dashboard <i class="far fa-snowflake"></i>
 			</h1>
 		</header>
-		
 		<main class="flex-row justify-space-between">
 			<div class="flex-row justify-space-between col-12">
 			  <div class="col-12 col-md-4">
@@ -42,11 +41,23 @@
 				</div>
 			  </div>
 			</div>
-			
-></main>
-		
-        
-
-    <script src="./assets/js/homepage.js"></script>
+			<div class="flex-row justify-space-between col-12">
+				<div class="col-12 col-md-4" id="search">
+				  <div class="card" id="history" style="display: none;">
+					<h3 class="card-header text-uppercase">Search History</h3>
+					<div class="card-body" id="history-buttons">
+					</div>
+				  </div>
+				</div>
+				<div class="col-12 col-md-8">
+				  <div class="card hidden" id="multi-day-card">
+					<h2 class="card-header" id="five-day-head">Multi-Day Forecast</h2>
+					<div class="card-body flex-row justify-space-around" id="multi-day">
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</main>
+		<script src="./assets/script.js"></script>
 	</body>
 </html>
