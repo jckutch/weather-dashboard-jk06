@@ -12,35 +12,35 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
 		/>
-		<link rel="stylesheet" href="./Assets/style.css" />
+		<link rel="stylesheet" href="./assets/style.css" />
 		<title>Weather Dashboard</title>
 	</head>
+
     <body class="flex-column min-100-vh">
 		<header class="hero">
 			<h1 class="app-title">
 				<i class="fas fa-cloud-sun-rain"></i> Weather Dashboard
 			</h1>
 		</header>
+		
 		<main class="flex-row justify-space-between">
-			<div class="col-12 col-md-4">
+			<div class="flex-row justify-space-between col-12">
+			  <div class="col-12 col-md-4">
 				<div class="card">
-					<h3 class="card-header text-uppercase">City Search</h3>
-					<form id="city-form" class="card-body">
-						<input
-							name="city-name"
-							id="city-name"
-							type="text"
-							autofocus="true"
-							class="form-input"
-					    />
-						<button type="submit" class="btn">Search</button>
-					</form>
+				  <h3 class="card-header text-uppercase">Search By City</h3>
+				  <form id="city-form" class="card-body">
+					<input name="city-name" id="city-name" type="text" autofocus="true" class="form-input" />
+					<button type="submit" class="btn">City Search</button>
+				  </form>
 				</div>
-			</div>
-			<div class="col-12 col-md-4">
-				<div class="city-card" id="city-weather"></div>
-					<h2 class = "city-header" id="city-date"></h2>
-				<div class="current-weather" id="current-conditions"></div>
+			  </div>
+			  <div class="col-12 col-md-8">
+				<div class="card hidden" id="weather-card">
+				  <h2 class="card-header" id="weather-condition"></h2>
+				  <div class="card-body" id="weather">
+				  </div>
+				</div>
+			  </div>
 			</div>
 			
 ></main>
