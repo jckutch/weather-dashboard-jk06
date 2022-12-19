@@ -44,7 +44,8 @@ var getWeatherInfo = function (cityName) {
             var date = (today.getMonth() + 1) + '/' + today.getDate() + '/' + today.getFullYear();
             var weatherIcon = cityResponse.weather[0].icon;
             var weatherDescription = cityResponse.weather[0].description;
-            var weatherIconLink = "<img src='http://openweathermap.org/img/wn/" + weatherIcon + "@2x.png' alt='" + weatherDescription + "' title='" + weatherDescription + "'  />"
+            var weatherIconLink = "<img src='http://openweathermap.org/img/wn/" + weatherIcon + 
+                "@2x.png' alt='" + weatherDescription + "' title='" + weatherDescription + "'  />";
             
             weatherEl.textContent = "";
             multiDayEl.textContent = "";
@@ -52,7 +53,8 @@ var getWeatherInfo = function (cityName) {
             weatherCardEl.classList.remove("hidden");
             multiDayCardEl.classList.remove("hidden");
 
-            return fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + latitude + '&lon=' + longitude + '&exclude=alerts,minutely,hourly&units=imperial&appid=f97301447cbd41068af8623a398ba1fb');
+            return fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + latitude + '&lon=' + 
+                longitude + '&exclude=alerts,minutely,hourly&units=imperial&appid=f97301447cbd41068af8623a398ba1fb');
         })
         .then(function (response) {
             return response.json();
