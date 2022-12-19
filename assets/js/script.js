@@ -3,6 +3,7 @@ var historyArray = [];
 var historyButtonsEl = document.querySelector("#history-buttons");
 var historyCardEl = document.querySelector("#history");
 
+// Creates local storage function
 var formHandler = function (event) {
     event.preventDefault();
     var cityName = cityInputEl.value.trim();
@@ -30,6 +31,7 @@ var multiDayCardEl = document.querySelector("#multi-day-card");
 var weatherConditionEl = document.querySelector('#weather-condition');
 var today = new Date();
 
+// Use api to get weather information
 var getWeatherInfo = function (cityName) {
     var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&appid=f97301447cbd41068af8623a398ba1fb";
     fetch(apiUrl)
@@ -65,6 +67,7 @@ var getWeatherInfo = function (cityName) {
         });
 };
 
+// Create weather elements for data to display on page
 var displayWeather = function (weather) {
 
       var temperature = document.createElement('p');
@@ -99,6 +102,7 @@ var displayWeather = function (weather) {
     }
 }
 
+// Presents all saved historical searches
 var loadHistory = function () {
     searchArray = JSON.parse(localStorage.getItem("weatherSearch"));
     if (searchArray) {
@@ -114,6 +118,7 @@ var loadHistory = function () {
     }
 }
 
+// History search button function
 var buttonClickHandler = function (event) {
     var cityName = event.target.getAttribute("cityData");
     if (cityName) {
